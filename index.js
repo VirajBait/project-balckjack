@@ -35,7 +35,10 @@ function startGame() {
     renderGame()
 }
 
-for (let i = 0; i < cards.length; i++) {
+function renderGame() {
+    cardsEl.textContent = "Cards: "
+
+    for (let i = 0; i < cards.length; i++) {
        if(sum === 21 && cards[i] === 11){
            cards[i] = 11
        }
@@ -48,9 +51,7 @@ for (let i = 0; i < cards.length; i++) {
              cards[i] = 1
         }
     } 
-
-function renderGame() {
-    cardsEl.textContent = "Cards: "
+    
     for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " "
     }
